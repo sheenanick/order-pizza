@@ -14,8 +14,9 @@
         <h1>Order a Pizza</h1>
       </div>
       <form>
+        <h4>Choose up to 3 toppings:</h4>
         <div class="form-group">
-          <label for="toppings">Choose your toppings:</label>
+          <label for="toppings"><em>Topping 1:</em></label>
           <select class="form-control" id="toppings">
             <option disabled selected="true">Please select one:</option>
             <option value="1">Cheese</option>
@@ -26,27 +27,49 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="size">Choose a size:</label>
-            <div class="radio-inline">
-              <label>
-                <input type="radio" name="size" value="5" checked>
-                Small
-              </label>
-            </div>
-            <div class="radio-inline">
-              <label>
-                <input type="radio" name="size" value="10">
-                Medium
-              </label>
-            </div>
-            <div class="radio-inline">
-              <label>
-                <input type="radio" name="size" value="15">
-                Large
-              </label>
-            </div>
+          <label for="toppings"><em>Topping 2:</em></label>
+          <select class="form-control" id="toppings">
+            <option disabled selected="true">Please select one:</option>
+            <option value="1">Cheese</option>
+            <option value="1.5">Pepperoni</option>
+            <option value="1.75">Olives</option>
+            <option value="1.25">Mushrooms</option>
+            <option value="2">Artichokes</option>
+          </select>
         </div>
-        <button class="btn btn-primary" type="submit" name="button">Order</button>
+        <div class="form-group">
+          <label for="toppings"><em>Topping 3:</em></label>
+          <select class="form-control" id="toppings">
+            <option disabled selected="true">Please select one:</option>
+            <option value="1">Cheese</option>
+            <option value="1.5">Pepperoni</option>
+            <option value="1.75">Olives</option>
+            <option value="1.25">Mushrooms</option>
+            <option value="2">Artichokes</option>
+          </select>
+        </div>
+        <h4>Choose a size:</h4>
+        <div class="form-group">
+          <div class="radio-inline">
+            <label>
+              <input type="radio" name="size" value="5" checked>
+              Small
+            </label>
+          </div>
+          <div class="radio-inline">
+            <label>
+              <input type="radio" name="size" value="10">
+              Medium
+            </label>
+          </div>
+          <div class="radio-inline">
+            <label>
+              <input type="radio" name="size" value="15">
+              Large
+            </label>
+          </div>
+        </div>
+        <button class="btn btn-primary" type="submit" name="button">Place Order</button>
       </form>
       <div class="output">
         <h3>Thank you for your order!</h3>
