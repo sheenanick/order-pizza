@@ -6,22 +6,18 @@
 
 ## Description
 
-_This is a web application where a user can choose one or more individual toppings and a size to order a pizza and see the final cost._
+_This is a web application where a user can choose up to three individual toppings and a size to order a pizza and see the final cost. The user can also order more than one pizza at a time and choose a delivery option._
 
 ## Specifications
 
-* _ _
-  * _Example Input:_
-  * _Example Output:_
-* _ _
-  * _Example Input:_
-  * _Example Output:_
-* _ _
-  * _Example Input:_
-  * _Example Output:_
-* _ _
-  * _Example Input:_
-  * _Example Output:_
+* _It can calculate the cost of a pizza based on topping(s) and size selection_
+  * _Example Input: topping1: cheese, size: large_
+  * _Example Output: $16.00_
+  * _Example Input: topping1: pepperoni, topping2: olives, topping3: artichokes, size: small_
+  * _Example Output: $10.25_
+* _It can calculate the the total order cost if there are multiple pizzas in the order_
+  * _Example Input: Pizza 1: cheese, large; Pizza 2: pepperoni, olives, artichokes, small_
+  * _Example Output: $26.25_
 
 ## Setup/Installation Requirements
 
