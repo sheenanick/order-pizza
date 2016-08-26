@@ -102,7 +102,7 @@ $(document).ready(function(){
     var city = $("#city").val();
     var state = $("#state").val();
     var zipcode = $("#zipcode").val();
-    var address = street + ", " + city + ", " + state + ", " + zipcode
+    var address = (street + ", " + city + ", " + state + ", " + zipcode).toUpperCase();
     $("#address").hide();
     $("#insert-address").text(address);
     $("#delivery, #new-order-button").show();
