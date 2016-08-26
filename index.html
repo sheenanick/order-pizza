@@ -9,10 +9,49 @@
     <title>Order Pizza</title>
   </head>
   <body>
-    <div>
-      <h1>Order a Pizza</h1>
-    </div>
     <div class="container">
+      <div>
+        <h1>Order a Pizza</h1>
+      </div>
+      <form>
+        <div class="form-group">
+          <label for="toppings">Choose your toppings:</label>
+          <select class="form-control" id="toppings">
+            <option disabled selected="true">Please select one:</option>
+            <option value="1">Cheese</option>
+            <option value="1.5">Pepperoni</option>
+            <option value="1.75">Olives</option>
+            <option value="1.25">Mushrooms</option>
+            <option value="2">Artichokes</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="size">Choose a size:</label>
+            <div class="radio-inline">
+              <label>
+                <input type="radio" name="size" value="5" checked>
+                Small
+              </label>
+            </div>
+            <div class="radio-inline">
+              <label>
+                <input type="radio" name="size" value="10">
+                Medium
+              </label>
+            </div>
+            <div class="radio-inline">
+              <label>
+                <input type="radio" name="size" value="15">
+                Large
+              </label>
+            </div>
+        </div>
+        <button class="btn btn-primary" type="submit" name="button">Order</button>
+      </form>
+      <div class="output">
+        <h3>Thank you for your order!</h3>
+        <h4>Your total is $<span id="price"></span></h4>
+      </div>
     </div>
   </body>
 </html>
