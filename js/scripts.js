@@ -81,26 +81,43 @@ $(document).ready(function(){
       var topping1 = parseFloat($(this).find(".topping1").val());
       var topping2 = parseFloat($(this).find(".topping2").val());
       var topping3 = parseFloat($(this).find(".topping3").val());
-      var size = parseInt($(this).find(".size").val());
+      var size = parseFloat($(this).find(".size").val());
       var pizza = new Pizza(topping1, topping2, topping3, size);
       order.pizzas.push(pizza)
     });
-    console.log(order);
-    $("#insertName").text(order.name);
+    $("#insert-name").text(order.name);
     $("#price").text(order.totalPrice(order.pizzas));
-    $(".output").show();
+    $("#output, #delivery-option").show();
+    $("#order").hide();
   });
 
-  $("button#deliver").click(function(event){
-
-  });
-
-  $("button#no-deliver").click(function(event){
-
+  $("button#yes-deliver").click(function(event){
+    $("#delivery-option").hide();
+    $("#address").show();
   });
 
   $("form#address").submit(function(event){
     event.preventDefault();
-    
+    var street = $("#street").val();
+    var city = $("#city").val();
+    var state = $("#state").val();
+    var zipcode = $("#zipcode").val();
+    var address = street + ", " + city + ", " + state + ", " + zipcode
+    $("#address").hide();
+    $("#insert-address").text(address);
+    $("#delivery, #new-order").show();
   });
+
+  $("button#no-deliver").click(function(event){
+    $("#delivery-option").hide();
+    $("#pick-up, #new-order").show();
+  });
+
+  $("#new-order").click(function(event){
+    $("#order")[0].reset();
+    $("#address")[0].reset();
+    $("#output, #pick-up, #delivery, #new-order").hide();
+    $("#order").show();
+  });
+
 });

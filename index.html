@@ -73,38 +73,48 @@
         <button class="btn" id="add-button"type="button">Add Another Pizza</button>
         <button class="btn btn-primary" type="submit">Place Order</button>
       </form>
-      <div class="output">
-        <h3>Thank you for your order, <span id="insertName"></span>!</h3>
+      <div id="output">
+        <h3>Thank you for your order, <span id="insert-name"></span>!</h3>
         <h4>Your total is $<span id="price"></span></h4>
-        <h5>We offer free delivery. Would you like us to deliver to you?</h5>
-        <button class="btn btn-success" type="button" id="deliver">Yes, please deliver!</button>
-        <button class="btn btn-danger" type="button" id="no-deliver">No, thank you.</button>
+        <div id="delivery-option">
+          <h5>We offer free delivery. Would you like us to deliver to you?</h5>
+          <button class="btn btn-success" type="button" id="yes-deliver">Yes, please deliver!</button>
+          <button class="btn btn-danger" type="button" id="no-deliver">No, thank you.</button>
+        </div>
       </div>
-      <div class="address">
-        <form id="address">
-          <h4>Enter delivery address information:</h4>
-          <div class="form-group">
-            <label for="street">Street:</label>
-            <input id="street" type="text" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="city">City:</label>
-            <input id="city" type="text" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="state">State:</label>
-            <input id="state" type="text" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="zipcode">Zipcode:</label>
-            <input id="zipcode" type="number" class="form-control">
-          </div>
-          <button class="btn btn-primary" type="submit" name="button">Submit</button>
-        </form>
+      <form id="address">
+        <h4>Enter delivery address information:</h4>
+        <div class="form-group">
+          <label for="street">Street:</label>
+          <input id="street" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="city">City:</label>
+          <input id="city" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="state">State:</label>
+          <input id="state" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="zipcode">Zipcode:</label>
+          <input id="zipcode" type="number" class="form-control">
+        </div>
+        <button class="btn btn-primary" type="submit" name="button">Submit</button>
+      </form>
+      <div id="pick-up">
+        <h4>Your order will be ready in approximately 30 minutes. We look forward to seeing you!</h4>
+        <p><strong>Our Location:</strong></p>
+        <p>1234 SW Main St</p>
+        <p>Portland, OR 91234</p>
+        <p>(503)123-1234</p>
       </div>
-      <div class="pick-up">
-        Your order will be ready in approximately 30 minutes.
+      <div id="delivery">
+        <p><strong>Your order will be delivered to the following address:</strong></p>
+        <span id="insert-address"></span>
+        <h4>Please allow 45-60 minutes for delivery. We appreciate your patience!</h4>
       </div>
+      <button class="btn btn-primary" id="new-order" type="button">Place another order</button>
     </div>
   </body>
 </html>
