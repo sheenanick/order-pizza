@@ -5,6 +5,6 @@ h1 {
 label {
   font-style: italic;
 }
-.output, .address, .pick-up {
+#output, #address, #pick-up, #delivery, #new-order {
   display: none;
 }
