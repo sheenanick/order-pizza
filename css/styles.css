@@ -1,0 +1,10 @@
+h1 {
+  text-align: center;
+}
+
+label {
+  font-style: italic;
+}
+.output, .address, .pick-up {
+  display: none;
+}

@@ -13,11 +13,20 @@
       <div>
         <h1>Order a Pizza</h1>
       </div>
-      <form>
+      <form id="order">
+        <h4>Contact Information:</h4>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input required class="form-control" id="name" type="text" name="name" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+          <label for="number">Phone Number:</label>
+          <input required class="form-control" id="number" type="tel" name="number" placeholder="Enter your phone number">
+        </div>
         <div class="new-order">
           <h4>Choose up to 3 toppings:</h4>
           <div class="form-group">
-            <label for="toppings"><em>Topping 1:</em></label>
+            <label for="toppings">Topping 1:</label>
             <select required class="form-control topping1">
               <option disabled selected="true" value="">Please select one:</option>
               <option value="1">Cheese</option>
@@ -28,7 +37,7 @@
             </select>
           </div>
           <div class="form-group">
-            <label for="toppings"><em>Topping 2:</em></label>
+            <label for="toppings">Topping 2:</label>
             <select class="form-control topping2">
               <option selected="true" value="0">Please select one:</option>
               <option value="1">Cheese</option>
@@ -39,7 +48,7 @@
             </select>
           </div>
           <div class="form-group">
-            <label for="toppings"><em>Topping 3:</em></label>
+            <label for="toppings">Topping 3:</label>
             <select class="form-control topping3">
               <option selected="true" value="0">Please select one:</option>
               <option value="1">Cheese</option>
@@ -51,8 +60,8 @@
           </div>
           <h4>Choose a size:</h4>
           <div class="form-group">
-            <select class="form-control size">
-              <option selected="true" value="0">Please select one:</option>
+            <select required class="form-control size">
+              <option disabled selected="true" value="">Please select one:</option>
               <option value="5">Small</option>
               <option value="10">Medium</option>
               <option value="15">Large</option>
@@ -61,12 +70,40 @@
         </div>
         <div id="add-order">
         </div>
-        <button class="btn" id="add-button"type="button" name="button">Add Another Pizza</button>
-        <button class="btn btn-primary" type="submit" name="button">Place Order</button>
+        <button class="btn" id="add-button"type="button">Add Another Pizza</button>
+        <button class="btn btn-primary" type="submit">Place Order</button>
       </form>
       <div class="output">
-        <h3>Thank you for your order!</h3>
+        <h3>Thank you for your order, <span id="insertName"></span>!</h3>
         <h4>Your total is $<span id="price"></span></h4>
+        <h5>We offer free delivery. Would you like us to deliver to you?</h5>
+        <button class="btn btn-success" type="button" id="deliver">Yes, please deliver!</button>
+        <button class="btn btn-danger" type="button" id="no-deliver">No, thank you.</button>
+      </div>
+      <div class="address">
+        <form id="address">
+          <h4>Enter delivery address information:</h4>
+          <div class="form-group">
+            <label for="street">Street:</label>
+            <input id="street" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="city">City:</label>
+            <input id="city" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="state">State:</label>
+            <input id="state" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="zipcode">Zipcode:</label>
+            <input id="zipcode" type="number" class="form-control">
+          </div>
+          <button class="btn btn-primary" type="submit" name="button">Submit</button>
+        </form>
+      </div>
+      <div class="pick-up">
+        Your order will be ready in approximately 30 minutes.
       </div>
     </div>
   </body>
