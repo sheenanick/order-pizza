@@ -12,11 +12,15 @@ Pizza.prototype.price = function(){
 $(document).ready(function(){
   $("form").submit(function(event){
     event.preventDefault();
-    var topping1 = parseFloat($("#toppings").val());
-    var topping2 = parseFloat($("#toppings").val());
-    var topping3 = parseFloat($("#toppings").val());
+    var topping1 = parseFloat($("#topping1").val());
+    var topping2 = parseFloat($("#topping2").val());
+    var topping3 = parseFloat($("#topping3").val());
     var size = parseInt($("input:radio[name=size]:checked").val());
     var order = new Pizza(topping1, topping2, topping3, size);
+    console.log(topping1);
+    console.log(topping2);
+    console.log(topping3);
+    console.log(order);
     $("#price").text(order.price());
     $(".output").show();
   });
