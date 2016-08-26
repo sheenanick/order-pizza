@@ -1,10 +1,46 @@
-h1 {
-  text-align: center;
+body {
+  font-family: 'Josefin Slab', serif;
+  background-color: #f1e6da;
 }
-
+h4 {
+  padding-top: 20px;
+}
+h5 {
+  font-size: 20px;
+}
+p {
+  font-size: 18px;
+}
 label {
   font-style: italic;
 }
-#output, #address, #pick-up, #delivery, #new-order {
+button {
+  margin-top: 15px;
+}
+.jumbotron {
+  margin: 0;
+  color: white;
+  background-image: url(../img/background.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 150px 0px 150px 0px;
+  text-align: center;
+}
+.container {
+  padding-bottom: 50px;
+}
+.location {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding-top: 10px;
+}
+.message, #delivery {
+  padding-top: 10px;
+}
+#output, #pick-up, #delivery, #new-order-button {
+  text-align: center;
+  display: none;
+}
+#address {
   display: none;
 }

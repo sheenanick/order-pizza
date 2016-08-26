@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.1.0.js"></script>
@@ -9,10 +10,10 @@
     <title>Order Pizza</title>
   </head>
   <body>
+    <div class="jumbotron">
+      <h1>Order a Pizza</h1>
+    </div>
     <div class="container">
-      <div>
-        <h1>Order a Pizza</h1>
-      </div>
       <form id="order">
         <h4>Contact Information:</h4>
         <div class="form-group">
@@ -75,7 +76,7 @@
       </form>
       <div id="output">
         <h3>Thank you for your order, <span id="insert-name"></span>!</h3>
-        <h4>Your total is $<span id="price"></span></h4>
+        <h3>Your total is $<span id="price"></span></h3>
         <div id="delivery-option">
           <h5>We offer free delivery. Would you like us to deliver to you?</h5>
           <button class="btn btn-success" type="button" id="yes-deliver">Yes, please deliver!</button>
@@ -103,18 +104,27 @@
         <button class="btn btn-primary" type="submit" name="button">Submit</button>
       </form>
       <div id="pick-up">
-        <h4>Your order will be ready in approximately 30 minutes. We look forward to seeing you!</h4>
-        <p><strong>Our Location:</strong></p>
-        <p>1234 SW Main St</p>
-        <p>Portland, OR 91234</p>
-        <p>(503)123-1234</p>
+        <h5>Your order will be ready in 30 minutes. We look forward to seeing you!</h5>
+        <div class="row">
+          <div class="location col-sm-4 col-sm-offset-4">
+            <h5><strong>Our Location:</strong></h5>
+            <p>1234 SW Main St</p>
+            <p>Portland, OR 91234</p>
+            <p>(503)123-1234</p>
+          </div>
+        </div>
       </div>
       <div id="delivery">
-        <p><strong>Your order will be delivered to the following address:</strong></p>
-        <span id="insert-address"></span>
-        <h4>Please allow 45-60 minutes for delivery. We appreciate your patience!</h4>
+        <h5>Your order will be delivered to the following address:</h5>
+        <p id="insert-address"></p>
+        <div class="message">
+          <h5>Please allow 45-60 minutes for delivery.</h5>
+          <h5>We appreciate your patience!</h5>
+        </div>
       </div>
-      <button class="btn btn-primary" id="new-order" type="button">Place another order</button>
+      <div id="new-order-button">
+        <button class="btn btn-primary btn-lg" id="new-order" type="button">Place another order</button>
+      </div>
     </div>
   </body>
 </html>
