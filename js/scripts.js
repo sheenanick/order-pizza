@@ -29,8 +29,8 @@ $(document).ready(function(){
                               '<h4>Choose up to 3 toppings:</h4>' +
                               '<div class="form-group">' +
                                 '<label for="toppings"><em>Topping 1:</em></label>' +
-                                '<select required class="form-control topping1">' +
-                                  '<option disabled selected="true" value="">Please select one:</option>' +
+                                '<select class="form-control topping1">' +
+                                  '<option selected="true" value="0">Please select one:</option>' +
                                   '<option value="1">Cheese</option>' +
                                   '<option value="1.5">Pepperoni</option>' +
                                   '<option value="1.75">Olives</option>' +
@@ -105,18 +105,18 @@ $(document).ready(function(){
     var address = street + ", " + city + ", " + state + ", " + zipcode
     $("#address").hide();
     $("#insert-address").text(address);
-    $("#delivery, #new-order").show();
+    $("#delivery, #new-order-button").show();
   });
 
   $("button#no-deliver").click(function(event){
     $("#delivery-option").hide();
-    $("#pick-up, #new-order").show();
+    $("#pick-up, #new-order-button").show();
   });
 
   $("#new-order").click(function(event){
     $("#order")[0].reset();
     $("#address")[0].reset();
-    $("#output, #pick-up, #delivery, #new-order").hide();
+    $("#output, #pick-up, #delivery, #new-order-button").hide();
     $("#order").show();
   });
 
